@@ -1,8 +1,13 @@
 @use "base";
 
+/*Regler för hela webbplatsen*/
 body {
     margin: 0;
     background-color: base.$primary-bg;
+}
+
+.down {
+    margin: 110px;
 }
 
 header {
@@ -10,6 +15,7 @@ header {
     grid-template-rows: auto;
     grid-template-columns: 10% 90%;
     background-color: base.$purple;
+    box-shadow: base.$primary-shadow;
     height: 100px;
     width: 100%;
     position: fixed;
@@ -124,3 +130,18 @@ Länkarna ligger i en lista istället för på rad.*/
         cursor: pointer;
     }
 }
+
+/*Slut på regler för huvudmeny*/
+
+footer {
+    background-color: base.$purple;
+    box-shadow: base.$primary-shadow;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*Slut på regler för hela webbplatsen*/
+
+/*Regler för startsidan*/
+/*Slut på regler för startsidan*/
