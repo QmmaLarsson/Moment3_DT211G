@@ -1,5 +1,11 @@
 @use "base";
 
+//Rubriker
+.h {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 //Knappar
 .button {
     font-size: 2rem;
@@ -14,8 +20,8 @@
 }
 
 //Bilder
-@mixin img-styling ($circle) {
-    @if $circle {
-        border-radius: 50%;
-    }
+@mixin picture-styling ($radius, $border-style) {
+    border-radius: $radius;
+    border-style: $border-style;
+
 }
