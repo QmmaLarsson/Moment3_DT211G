@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startsida</title>
     <link rel="stylesheet" href="css/main.scss">
     <script src="js/main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/d768b3824b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+    <header>
+
+        <!-- En knapp för att öppna meny på mindre skärmar -->
+        <button id="openmenu" class="menubutton">
+            <span><i class="fa-solid fa-bars"></i></span>
+            <span>
+                Meny
+            </span>
+        </button>
+
+        <nav id="huvudmeny">
+
+            <!-- En knapp för att stänga menyn på mindre skärmar -->
+            <button id="closemenu" class="menubutton">
+                <span>X</span>
+                <span>Stäng</span>
+            </button>
+
+            <ul>
+                <li><a href="index.html">STARTSIDA</a></li>
+                <li><a href="sass.html">SASS</a></li>
+                <li><a href="#">SIDA 3</a></li>
+                <li><a href="#">SIDA 4</a></li>
+                <li><a href="#">SIDA 5</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
     <h1>Moment 3</h1>
+    
 </body>
+
 </html>

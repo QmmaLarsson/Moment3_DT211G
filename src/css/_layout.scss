@@ -1,0 +1,126 @@
+@use "base";
+
+body {
+    margin: 0;
+    background-color: base.$primary-bg;
+}
+
+header {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 10% 90%;
+    background-color: base.$purple;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+
+/*Regler för huvudmeny*/
+#huvudmeny {
+    grid-area: 1/1/2/4;
+    text-align: right;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: inline-block;
+        background-color: base.$primary-bg;
+        color: base.$black;
+        text-decoration: none;
+        padding: 30px;
+        margin-right: 5px;
+    }
+
+    a:hover {
+        background-color: base.$purple-complement;
+    }
+
+    #closemenu {
+        /*Knappen visas inte i ursprungsläget*/
+        display: none;
+    }
+}
+
+#openmenu {
+    /*Knappen visas inte i ursprungsläget*/
+    display: none;
+}
+
+/*Skärmstorlekar med en maxbredd på 800px få en annorlunda meny. En meny som ligger till höger på sidan och som täcker hela förnstrets view height. 
+Länkarna ligger i en lista istället för på rad.*/
+@media screen and (max-width: 800px) {
+    header {
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    #huvudmeny {
+        /*Menyn visas inte i startläget. För att menyn ska visas måste man klicka på "Meny"-knappen. Denna funktion skapas med hjälp av 
+        JavaScript.*/
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        text-align: left;
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            display: block;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            padding: 30px;
+        }
+
+        #closemenu {
+            /*Knappen visas*/
+            display: block;
+            padding: 30px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            background-color: base.$primary-bg;
+        }
+
+        #closemenu:hover {
+            background-color: base.$purple-complement;
+            cursor: pointer;
+        }
+    }
+
+    #openmenu {
+        /*Knappen visas*/
+        display: block;
+        grid-area: 1/3/2/4;
+        width: 100%;
+        height: 100px;
+        background-color: base.$primary-bg;
+        border-color: base.$purple;
+        border-style: solid;
+        border-width: 5px;
+    }
+
+    #openmenu:hover {
+        background-color: base.$purple-complement;
+        cursor: pointer;
+    }
+}
