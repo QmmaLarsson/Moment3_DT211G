@@ -1,13 +1,50 @@
 @use "base";
 
 /*Regler för hela webbplatsen*/
+html {
+    /*62,5% av 16px ger 10px*/
+    font-size: 62.5%;
+}
+
 body {
+    /*Textstorlek 16px som standard*/
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: base.$font-stack;
     margin: 0;
     background-color: base.$primary-bg;
 }
 
-.down {
-    margin: 110px;
+main {
+    padding-top: 100px;
+}
+
+h1 {
+    /*Textstorlek 32px som standard*/
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    /*Textstorlek 24 som standard*/
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    /*Textstorlek 20px som standard*/
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
 }
 
 header {
@@ -109,7 +146,6 @@ Länkarna ligger i en lista istället för på rad.*/
 
         #closemenu:hover {
             background-color: base.$purple-complement;
-            cursor: pointer;
         }
     }
 
@@ -127,7 +163,6 @@ Länkarna ligger i en lista istället för på rad.*/
 
     #openmenu:hover {
         background-color: base.$purple-complement;
-        cursor: pointer;
     }
 }
 
