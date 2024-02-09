@@ -7,3 +7,15 @@
     font-family: base.$font-stack;
     cursor: pointer;
 }
+
+@mixin button-styling ($padding, $border-style) {
+    padding: $padding;
+    border-style: $border-style;
+}
+
+//Bilder
+@mixin img-styling ($circle) {
+    @if $circle {
+        border-radius: 50%;
+    }
+}
