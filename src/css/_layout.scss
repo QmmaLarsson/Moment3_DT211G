@@ -46,6 +46,12 @@ header {
     z-index: 1;
 }
 
+#logo {
+    grid-area: 1/1/2/2;
+    margin: auto;
+    padding-left: 5px;
+}
+
 
 /*Regler för huvudmeny*/
 #huvudmeny {
@@ -100,9 +106,9 @@ header {
     @include component.button-styling(0, solid)
 }
 
-/*Skärmstorlekar med en maxbredd på 800px få en annorlunda meny. En meny som ligger till höger på sidan och som täcker hela förnstrets view height. 
+/*Skärmstorlekar med en maxbredd på 900px får en annorlunda meny. En meny som ligger till höger på sidan och som täcker hela förnstrets view height. 
 Länkarna ligger i en lista istället för på rad.*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     header {
         grid-template-columns: 20% 60% 20%;
     }
@@ -200,7 +206,7 @@ footer {
         background-color: base.$purple-complement-darkmode;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 900px) {
         #huvudmeny {
             background-color: base.$primary-bg-darkmode;
         }
@@ -264,8 +270,8 @@ footer {
     }
 }
 
-/*Skärmstorlekar med en maxbredd på 800px.*/
-@media screen and (max-width: 800px) {
+/*Skärmstorlekar med en maxbredd på 900px.*/
+@media screen and (max-width: 900px) {
     #container1 {
         #text1 {
             margin-left: 10%;
@@ -312,7 +318,7 @@ footer {
     margin-right: 25%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #container2 {
         margin-left: 10%;
         margin-right: 10%;
