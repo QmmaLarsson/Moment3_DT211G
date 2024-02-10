@@ -9,7 +9,7 @@ html {
 
 body {
     /*Textstorlek 16px som standard*/
-    font-size: 2rem;
+    font-size: base.$main-fontsize;
     line-height: 2.5rem;
     font-family: base.$font-stack;
     margin: 0;
@@ -18,25 +18,31 @@ body {
 
 main {
     padding-top: 100px;
+    min-height: 80%;
 }
 
 h1 {
     /*Textstorlek 32px som standard*/
-    font-size: 3.2rem;
+    @include component.heading-size(1);
     @extend .h;
-
 }
 
 h2 {
     /*Textstorlek 24 som standard*/
-    font-size: 2.4rem;
+    @include component.heading-size(2);
+    @extend .h;
+}
+
+h3 {
+    /*Textstorlek 20 som standard*/
+    @include component.heading-size(3);
     @extend .h;
 }
 
 header {
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 20% 80%;
     background-color: base.$purple;
     box-shadow: base.$primary-shadow;
     height: 100px;
@@ -44,18 +50,19 @@ header {
     position: fixed;
     top: 0;
     z-index: 1;
-}
 
-#logo {
-    grid-area: 1/1/2/2;
-    margin: auto;
-    padding-left: 5px;
+    #logo {
+        grid-area: 1/1/2/2;
+        margin-top: auto;
+        margin-bottom: auto;
+        padding-left: 5px;
+    }
 }
 
 
 /*Regler för huvudmeny*/
 #huvudmeny {
-    grid-area: 1/1/2/4;
+    grid-area: 1/2/2/4;
     text-align: right;
     overflow: hidden;
     margin-top: auto;
