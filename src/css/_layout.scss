@@ -352,6 +352,7 @@ footer {
     @include component.square(250px);
     background-color: base.$purple;
     margin: 20 auto;
+    transition: 1000ms;
 
     #hiddenText {
         font-size: 10rem;
@@ -361,6 +362,7 @@ footer {
 
 #animation1:hover {
     animation: backgroundChange 5s forwards;
+    cursor: pointer;
 }
 
 #animation2 {
@@ -370,6 +372,7 @@ footer {
     @include component.square(250px);
     background-color: base.$purple;
     margin: 20 auto;
+    transition: 1000ms;
 
     #hiddenText {
         font-size: 10rem;
@@ -379,6 +382,7 @@ footer {
 
 #animation2:hover #hiddenText {
     animation: textshadowChange 5s forwards;
+    cursor: pointer;
 }
 
 #animation3 {
@@ -389,6 +393,7 @@ footer {
     background-color: base.$purple;
     margin: 20 auto;
     transform: rotate(180deg);
+    transition: 1000ms;
 
     #hiddenText {
         font-size: 10rem;
@@ -396,7 +401,8 @@ footer {
 }
 
 #animation3:hover {
-    animation: rotate180 5s infinite;
+    animation: rotate180 5s forwards;
+    cursor: pointer;
 }
 
 #animation4 {
@@ -406,6 +412,7 @@ footer {
     @include component.square(250px);
     background-color: base.$purple;
     margin: 20 auto;
+    transition: 1000ms;
 
     #hiddenText {
         font-size: 0rem;
@@ -413,20 +420,20 @@ footer {
 }
 
 #animation4:hover #hiddenText {
-    animation: fontsizeChange 5s infinite;
+    animation: fontsizeChange 5s forwards;
+    cursor: pointer;
 }
 
 #animation5 {
     grid-area: 3/1/4/2;
     @include component.square(250px);
     margin: 20 auto;
+    animation: borderRadiusChange 10s linear infinite alternate;
 
-    picture {
-        height: 100%;
-
-        img {
-            max-width: 250px;
-        }
+    img {
+        width: 100%;
+        max-width: 250px;
+        animation: borderRadiusChange 10s linear infinite alternate;
     }
 }
 
@@ -437,15 +444,7 @@ footer {
     background-size: 100%;
     background-position: center;
     margin: 20 auto;
-    animation: zoomBackground 5s infinite;
-
-    picture {
-        height: 100%;
-
-        img {
-            max-width: 250px;
-        }
-    }
+    animation: zoomBackground 5s ease infinite alternate;
 }
 
 #animation7 {
@@ -454,39 +453,32 @@ footer {
     margin: 20 auto;
     position: relative;
 
-    picture {
-        height: 100%;
-
-        img {
-            max-width: 250px;
-        }
-    }
-
-    #overlay {
-        height: 100%;
+    img {
         width: 100%;
-        background-color: base.$black;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 1;
-        animation: opacityChange 5s infinite;
+        max-width: 250px;
     }
+}
 
+#overlay {
+    height: 100%;
+    width: 100%;
+    background-color: base.$black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation: opacityChange 10s ease-in-out infinite alternate;
 }
 
 #animation8 {
     grid-area: 3/4/4/5;
     @include component.square(250px);
     margin: 20 auto;
-    animation: moveElement 5s infinite;
+    animation: moveElement 10s linear infinite;
 
-    picture {
-        height: 100%;
-
-        img {
-            max-width: 250px;
-        }
+    img {
+        width: 100%;
+        max-width: 250px;
     }
 }
 
