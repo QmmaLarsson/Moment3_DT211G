@@ -42,3 +42,10 @@
     border-style: $border-style;
 
 }
+
+//Fyrkanter
+@mixin square ($size) {
+    height: $size;
+    width: $size;
+
+}

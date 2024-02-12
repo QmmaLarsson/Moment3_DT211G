@@ -349,8 +349,7 @@ footer {
     grid-area: 2/1/3/2;
     display: grid;
     place-items: center;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     background-color: base.$purple;
     margin: 20 auto;
 
@@ -368,8 +367,7 @@ footer {
     grid-area: 2/2/3/3;
     display: grid;
     place-items: center;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     background-color: base.$purple;
     margin: 20 auto;
 
@@ -387,8 +385,7 @@ footer {
     grid-area: 2/3/3/4;
     display: grid;
     place-items: center;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     background-color: base.$purple;
     margin: 20 auto;
     transform: rotate(180deg);
@@ -406,8 +403,7 @@ footer {
     grid-area: 2/4/3/5;
     display: grid;
     place-items: center;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     background-color: base.$purple;
     margin: 20 auto;
 
@@ -422,35 +418,48 @@ footer {
 
 #animation5 {
     grid-area: 3/1/4/2;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     margin: 20 auto;
 
-    img {
-        animation: borderRadiusChange 5s infinite;
+    picture {
+        height: 100%;
+
+        img {
+            max-width: 250px;
+        }
     }
 }
 
 #animation6 {
     grid-area: 3/2/4/3;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     background-image: url(../images/img5.jpg);
     background-size: 100%;
     background-position: center;
     margin: 20 auto;
     animation: zoomBackground 5s infinite;
+
+    picture {
+        height: 100%;
+
+        img {
+            max-width: 250px;
+        }
+    }
 }
 
 #animation7 {
     grid-area: 3/3/4/4;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     margin: 20 auto;
     position: relative;
 
     picture {
         height: 100%;
+
+        img {
+            max-width: 250px;
+        }
     }
 
     #overlay {
@@ -468,10 +477,17 @@ footer {
 
 #animation8 {
     grid-area: 3/4/4/5;
-    height: 250px;
-    width: 250px;
+    @include component.square(250px);
     margin: 20 auto;
     animation: moveElement 5s infinite;
+
+    picture {
+        height: 100%;
+
+        img {
+            max-width: 250px;
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
