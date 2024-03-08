@@ -7,7 +7,9 @@
     <title>Startsida</title>
     <link rel="stylesheet" href="css/main.scss">
     <script src="js/main.js" type="module"></script>
+    <script src="js/diagram.js" type="module"></script>
     <script src="https://kit.fontawesome.com/d768b3824b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body>
@@ -45,6 +47,8 @@
     </header>
 
     <main>
+        <canvas id="barChart" style="width: 100%; max-width: 800px;"></canvas>
+        <canvas id="pieChart" style="width: 100%; max-width: 800px;"></canvas>
     </main>
 
     <footer>
