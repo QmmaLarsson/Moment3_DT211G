@@ -575,3 +575,86 @@ footer {
 }
 
 /*Slut på regler för sidan "Animationer"*/
+
+/*Regler för sidan "Diagram"*/
+#container4 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 20px;
+}
+
+#heading3 {
+    grid-area: 1/1/2/2;
+    margin: auto;
+}
+
+#heading4 {
+    grid-area: 2/1/3/2;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#barChart {
+    grid-area: 3/1/4/2;
+    margin: auto;
+}
+
+#heading5 {
+    grid-area: 4/1/5/2;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#pieChart {
+    grid-area: 5/1/6/2;
+    margin: auto;
+}
+
+#error {
+    grid-area: 6/1/7/2;
+    margin: auto;
+}
+
+/*Slut på regler för sidan "Diagram"*/
+
+/*Regler för sidan "Karta"*/
+#container5 {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+#heading6 {
+    grid-area: 1/1/2/2;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#search {
+    grid-area: 2/1/3/2;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#map {
+    grid-area: 3/1/4/2;
+    margin: auto;
+    height: 400px;
+    width: 600px;
+    max-width: 100%;
+}
+
+#error2 {
+    grid-area: 4/1/5/2;
+    margin: auto;
+}
+
+/*Slut på regler för sidan "Karta"*/

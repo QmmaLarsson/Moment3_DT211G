@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karta</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="js/main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/d768b3824b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="js/map.js" type="module"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <a id="logo" href="index.html"><img src="images/logo.svg" alt="Emmas webbplats logotyp"></a>
+
+        <!-- En knapp för att öppna meny på mindre skärmar -->
+        <button id="openmenu" class="button">
+            <span><i class="fa-solid fa-bars"></i></span>
+            <span>
+                <br>MENY
+            </span>
+        </button>
+
+        <nav id="huvudmeny">
+
+            <!-- En knapp för att stänga menyn på mindre skärmar -->
+            <button id="closemenu" class="button">
+                <span>X</span>
+                <span>STÄNG</span>
+            </button>
+
+            <ul>
+                <li><a href="index.html">START</a></li>
+                <li><a href="sass.html">SASS</a></li>
+                <li><a href="animations.html">ANIMATIONER</a></li>
+                <li><a href="diagram.html">DIAGRAM</a></li>
+                <li><a href="map.html">KARTA</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <div id="container5">
+            <h1 id="heading6">Karta</h1>
+            <div id="search">
+                <label for="searchInput" id="text"><b>Sök:</b></label>
+                <br>
+                <input type="text" id="searchInput" placeholder="Skriv in en plats">
+                <button id="searchBtn">Sök</button>
+            </div>
+            <div id="map"></div>
+            <div id="error2"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Laborationsuppgift för kursen DT211G, Frontend-baserad webbutveckling <br> &copy; Copyright Emma Larsson,
+            2024
+        </p>
+    </footer>
+
+</body>
+
+</html>
